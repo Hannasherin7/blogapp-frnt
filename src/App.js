@@ -2,13 +2,16 @@ import logo from './logo.svg';
 import './App.css';
 import { Sighnin } from './components/Sighnin';
 import { Sighnup } from './components/Sighnup';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 function App() {
   return (
-    <div className="App">
-      <Sighnin></Sighnin>
-     <Sighnup></Sighnup>
-    </div>
+    <BrowserRouter>
+    <Routes>
+      <Route path='/'element={(<Sighnin/>)}/>
+      <Route path='/sighn'element={(<Sighnup/>)}/>
+    </Routes>
+    </BrowserRouter>
   );
 }
 
